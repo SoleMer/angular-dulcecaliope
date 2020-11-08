@@ -1,0 +1,10 @@
+<h3>Carrito de compras</h3>
+<table class="table">
+    <tbody>
+        <tr *ngFor="let prenda of (cartList$ | async)">
+            <td>{{prenda.quatity}}</td>
+            <td>{{prenda.name}}</td>
+            <!--- <td>({{prenda.price}}*{{prenda.quantity}})</td> -->
+        </tr>
+    </tbody>
+</table>

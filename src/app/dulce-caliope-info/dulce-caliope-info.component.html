@@ -1,0 +1,19 @@
+<!--<div class="card-group" style="max-width: 700px;">
+    <div *ngFor="let item of items" class="card">
+        <img [src]="item.image" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{item.title}}</h5>
+        </div>
+    </div>
+</div>
+-->
+<div class="row row-cols-1 row-cols-md-3">
+    <div *ngFor="let item of items" class="col mb-4">
+        <div class="card">
+            <img [src]="item.image" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{item.title}}</h5>
+            </div>
+        </div>
+    </div>
+</div>
