@@ -13,7 +13,16 @@
             <img [src]="item.image" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">{{item.title}}</h5>
+                <button class="btn btn-primary" (click)="setSelected(item)" [selected]="item">Leer</button>
             </div>
         </div>
     </div>
+</div>
+
+<div *ngIf="selected" id="selected">
+    <h6>{{selected.date}}</h6>
+    <h2>{{selected.title}}</h2>
+    <h4>{{selected.subtitle}}</h4>
+    <p>{{selected.content}}</p>
+    <p>{{selected.conclusion}}</p>
 </div>

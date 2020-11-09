@@ -14,7 +14,7 @@ export class InputIntegerComponent implements OnInit {
   quantity: number;
 
   @Input()
-  max: number;
+  max: number; 
 
   @Input()
   maxAlcanzado: boolean;

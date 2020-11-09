@@ -1,18 +1,20 @@
-<h3>Carrito de compras</h3>
+<div class="head">
+    <img src="../../assets/img/carrito.jpg" alt="">
+    <h3>Carrito de compras</h3>
+</div>
 <table class="table">
-    <!--
-    <thead *ngIf="cartList$.lenght != 0">
+    <thead>
         <tr>
             <th>Cantidad</th>
             <th>Prenda</th>
             <th>Costo</th>
         </tr>
-    </thead> -->
+    </thead>
     <tbody>
         <tr *ngFor="let prenda of (cartList$ | async)">
             <td>{{prenda.quantity}}</td>
             <td>{{prenda.name}}</td>
-            <td>{{prenda.price}}</td>
+            <td>${{prenda.price}}</td>
         </tr>
     </tbody>
 </table>
