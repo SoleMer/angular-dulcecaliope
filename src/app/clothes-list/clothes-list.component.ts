@@ -44,9 +44,11 @@ export class ClothesListComponent implements OnInit {
   }
 
   addToCart(prenda):void {
-    this.cart.addToCart(prenda);
-    prenda.stock -=prenda.quantity;
-    prenda.quantity = 0;
+    if(prenda.quantity!=0){
+      this.cart.addToCart(prenda);
+      prenda.stock -=prenda.quantity;
+      prenda.quantity = 0;
+    }
   }
 
   maxReached(m:string){

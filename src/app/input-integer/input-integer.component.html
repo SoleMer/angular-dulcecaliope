@@ -2,4 +2,5 @@
     <button class="btn-primary" (click)="downQuantity()">-</button>
     <input type="text" [(ngModel)]="quantity" (keyup)="onChangeQuantity($event)">
     <button class="btn-primary" (click)="upQuantity()">+</button>
+    <label *ngIf="maxAlcanzado">Máximo alcanzado</label>
 </div>

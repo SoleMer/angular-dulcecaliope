@@ -22,7 +22,7 @@
                 <app-input-integer [(quantity)]="prenda.quantity" [max]="prenda.stock" *ngIf="!prenda.stock==0" (maxReached)="maxReached($event)"></app-input-integer>
             </td>
             <td>
-                <button class="btn btn-primary" (click)="addToCart(prenda)">Comprar</button>
+                <button *ngIf="!prenda.stock==0" class="btn btn-primary" (click)="addToCart(prenda)">Comprar</button>
             </td>
         </tr>
     </tbody>

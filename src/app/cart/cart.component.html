@@ -1,10 +1,18 @@
 <h3>Carrito de compras</h3>
 <table class="table">
+    <!--
+    <thead *ngIf="cartList$.lenght != 0">
+        <tr>
+            <th>Cantidad</th>
+            <th>Prenda</th>
+            <th>Costo</th>
+        </tr>
+    </thead> -->
     <tbody>
         <tr *ngFor="let prenda of (cartList$ | async)">
-            <td>{{prenda.quatity}}</td>
+            <td>{{prenda.quantity}}</td>
             <td>{{prenda.name}}</td>
-            <!--- <td>({{prenda.price}}*{{prenda.quantity}})</td> -->
+            <td>{{prenda.price}}</td>
         </tr>
     </tbody>
 </table>
