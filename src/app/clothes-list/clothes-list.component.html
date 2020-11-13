@@ -16,8 +16,12 @@
             <td>{{prenda.name}}</td>
             <td>{{prenda.size}}</td>
             <td>{{prenda.price | currency}}</td>
-            <td *ngIf="prenda.stock==0">Sin Stock</td>
-            <td *ngIf="!prenda.stock==0">Disponible</td>
+            <td>
+                <span class="badge badge-warning" *ngIf="prenda.stock==0; else disponible">Sin Stock</span>
+                <ng-template #disponible>
+                    <span>Disponible</span>
+                </ng-template>
+            </td>
             <td>
                 <app-input-integer [(quantity)]="prenda.quantity" [max]="prenda.stock" *ngIf="!prenda.stock==0" (maxReached)="maxReached($event)"></app-input-integer>
             </td>
